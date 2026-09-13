@@ -1,6 +1,6 @@
 # E2 · Arqueología DNS
 
-**Fecha y hora:** 12 sep 2026
+**Fecha:** 12 sep 2026
 **Herramienta:** nslookup (Git Bash, Windows 10)
 **Resolver que respondió:** dns5.emcali.net.co (200.29.96.24)
 
