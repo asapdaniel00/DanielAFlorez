@@ -105,13 +105,28 @@ Bloque B. Ejercicios E2 y E3.
 
 ## Día 4 — 13 sep
 
-**Horas efectivas:** __ h (práctica: __ · teoría: __ · coach: __)
+**Horas efectivas:** 2.5 h (práctica: X · teoría: x · coach: __)
 
 ### Qué estudié
-
+git
 
 ### Qué construí (con enlaces a commits)
+-Se realiza ejercicio E4:
 
+$ git log --oneline
+5a9442d (HEAD -> main, origin/main) Se agrega evidencia del ejercicio E5 de conflicto de merge
+91826bf Resolver conflicto de merge en el tirulo del README
+067feda (rama-b) Cambio titulo del README desde rama-b
+17e991f (rama-a) Cambiar titulo del README desde rama-a
+2160895 Se envia primer prueba README
+0389cf4 Bitacora al dia
+8d12e43 Se realiza ejercicio E3 http
+0a7ba6a Se realiza ejercicio E2 dns
+f152997 Se sube Bitacora actualizada
+c5c80a3 Se agrega evidencia del ejercicio E1
+b2af8f8 Creación repositorio con README inicial del portafolio
+
+Y E5: https://github.com/asapdaniel00/DanielAFlorez/commit/5a9442db73858ec32b02db12e4cda49ede3de136
 
 ### En qué me atasqué y cómo salí
 
