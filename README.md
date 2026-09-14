@@ -1,1 +1,1 @@
-﻿Segundo README
+Segundo README
