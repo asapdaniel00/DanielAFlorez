@@ -1,0 +1,41 @@
+/* ===========================================================
+   variables.css — el sistema de diseño del sitio.
+   Todo lo que se repite vive acá y en ningún otro lado.
+   Si cambio un color, lo cambio UNA vez y cambia el sitio entero.
+   =========================================================== */
+
+:root {
+  /* --- Color --------------------------------------------------
+     Contraste verificado contra fondo blanco (#ffffff):
+       --color-texto        14.8:1   (mínimo exigido: 4.5:1)
+       --color-texto-suave   6.5:1
+       --color-primario      8.9:1
+       --color-foco          5.0:1
+     Y texto blanco sobre --color-primario: 8.9:1
+  ------------------------------------------------------------ */
+  --color-primario: #0f4c81;
+  --color-primario-oscuro: #0a3558;
+  --color-texto: #1f2933;
+  --color-texto-suave: #52606d;
+  --color-fondo: #ffffff;
+  --color-fondo-alterno: #f5f7fa;
+  --color-borde: #d9e2ec;
+  --color-foco: #b45309;
+
+  /* --- Tipografía --------------------------------------------- */
+  --fuente-base: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --fuente-titulos: Georgia, "Times New Roman", serif;
+
+  /* --- Escala de espacios --------------------------------------
+     Una escala fija evita el "acá le pongo 13px, allá 17px".
+  ------------------------------------------------------------ */
+  --espacio-1: 0.5rem;
+  --espacio-2: 1rem;
+  --espacio-3: 1.5rem;
+  --espacio-4: 2rem;
+  --espacio-5: 3rem;
+
+  /* --- Medidas ------------------------------------------------- */
+  --ancho-maximo: 64rem;
+  --radio: 0.5rem;
+}
