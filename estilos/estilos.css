@@ -1,11 +1,3 @@
-/* ===========================================================
-   estilos.css — tipografía, color y estados.
-   El layout (Flexbox y Grid) está más abajo, en su propio bloque.
-   Cero reglas con prioridad forzada y cero estilos en linea (RC-8).
-   =========================================================== */
-
-/* --- Base ---------------------------------------------------- */
-
 *,
 *::before,
 *::after {
@@ -25,8 +17,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-/* --- Títulos -------------------------------------------------- */
 
 h1,
 h2,
@@ -54,8 +44,6 @@ p {
   max-width: 62ch;
 }
 
-/* --- Enlaces -------------------------------------------------- */
-
 a {
   color: var(--color-primario);
   text-decoration: underline;
@@ -65,7 +53,6 @@ a:hover {
   color: var(--color-primario-oscuro);
 }
 
-/* El foco del teclado. Sin esto, quien navega con Tab está a ciegas. */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -73,8 +60,6 @@ textarea:focus-visible {
   outline: 3px solid var(--color-foco);
   outline-offset: 2px;
 }
-
-/* --- Navegación ----------------------------------------------- */
 
 .navegacion-lista {
   list-style: none;
@@ -94,14 +79,11 @@ textarea:focus-visible {
   color: var(--color-primario);
 }
 
-/* CA-2: la página en la que estás se marca sola. */
 .navegacion-lista a.activo {
   color: var(--color-primario);
   font-weight: 700;
   border-bottom-color: var(--color-primario);
 }
-
-/* --- Formulario ----------------------------------------------- */
 
 label {
   display: block;
@@ -141,15 +123,6 @@ button:hover {
   font-size: 0.875rem;
 }
 
-/* ===========================================================
-   LAYOUT — de acá para abajo se acomoda la página.
-   Está escrito "mobile first": las reglas base son las del
-   celular y las media queries solo AGREGAN a medida que hay
-   más espacio. Nunca se quita nada, siempre se suma.
-   =========================================================== */
-
-/* --- Cabecera ------------------------------------------------- */
-
 header {
   background-color: var(--color-fondo-alterno);
   border-bottom: 1px solid var(--color-borde);
@@ -161,15 +134,11 @@ header nav {
   padding: var(--espacio-1) var(--espacio-2);
 }
 
-/* Flexbox: los 3 enlaces en fila. flex-wrap deja que bajen
-   de renglón si la pantalla es muy angosta, en vez de desbordarse. */
 .navegacion-lista {
   display: flex;
   flex-wrap: wrap;
   gap: var(--espacio-1);
 }
-
-/* --- Contenedor principal ------------------------------------- */
 
 main {
   max-width: var(--ancho-maximo);
@@ -181,8 +150,6 @@ section {
   margin-bottom: var(--espacio-5);
 }
 
-/* --- Presentación del inicio (Flexbox) ------------------------ */
-
 .presentacion {
   display: flex;
   flex-wrap: wrap;
@@ -191,9 +158,6 @@ section {
   margin-bottom: var(--espacio-5);
 }
 
-/* flex: crecer / encoger / base.
-   Con base 18rem, si no caben 18rem + el avatar, el navegador
-   los apila solo. Esto es responsive SIN media query. */
 .presentacion-texto {
   flex: 1 1 18rem;
   min-width: 0;
@@ -233,16 +197,13 @@ section {
   padding-left: var(--espacio-3);
 }
 
-/* --- Grilla de proyectos (CSS Grid) --------------------------- */
-
 .grilla-proyectos {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   gap: var(--espacio-3);
-  grid-template-columns: 1fr; /* móvil: 1 columna */
-}
+  grid-template-columns: 1fr; }
 
 .tarjeta {
   display: flex;
@@ -253,8 +214,6 @@ section {
   border-radius: var(--radio);
 }
 
-/* Dentro de una tarjeta el límite de 62ch estorba: la tarjeta
-   ya es angosta y el ancho lo manda la grilla. */
 .tarjeta p {
   max-width: none;
 }
@@ -272,8 +231,6 @@ section {
   font-size: 0.875rem;
 }
 
-/* margin-top: auto empuja los enlaces al fondo de la tarjeta,
-   así quedan alineados aunque los textos midan distinto. */
 .tarjeta-enlaces {
   display: flex;
   flex-direction: column;
@@ -287,8 +244,6 @@ section {
   border-style: dashed;
   color: var(--color-texto-suave);
 }
-
-/* --- Formulario y redes --------------------------------------- */
 
 .formulario {
   max-width: 34rem;
@@ -307,12 +262,6 @@ section {
   gap: var(--espacio-3);
 }
 
-/* ===========================================================
-   MEDIA QUERIES — solo dos. Los puntos de corte los eligió el
-   contenido, no los tamaños de celulares de moda.
-   =========================================================== */
-
-/* Tablet: ya caben 2 tarjetas cómodas. */
 @media (min-width: 640px) {
   .grilla-proyectos {
     grid-template-columns: repeat(2, 1fr);
@@ -323,7 +272,6 @@ section {
   }
 }
 
-/* Escritorio: caben 3. */
 @media (min-width: 1024px) {
   .grilla-proyectos {
     grid-template-columns: repeat(3, 1fr);
@@ -336,13 +284,6 @@ section {
   }
 }
 
-/* ===========================================================
-   ACCESIBILIDAD
-   =========================================================== */
-
-/* Enlace "saltar al contenido": invisible hasta que alguien
-   presiona Tab. Le ahorra a quien navega con teclado o lector
-   de pantalla tener que pasar por el menú en CADA página. */
 .salto-contenido {
   position: absolute;
   top: 0;
@@ -360,8 +301,6 @@ section {
   transform: translateY(0);
 }
 
-/* main recibe el foco cuando se usa el salto, pero no debe
-   dibujarse un recuadro alrededor de toda la página. */
 main:focus {
   outline: none;
 }
