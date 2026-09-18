@@ -335,3 +335,33 @@ section {
     padding-right: var(--espacio-4);
   }
 }
+
+/* ===========================================================
+   ACCESIBILIDAD
+   =========================================================== */
+
+/* Enlace "saltar al contenido": invisible hasta que alguien
+   presiona Tab. Le ahorra a quien navega con teclado o lector
+   de pantalla tener que pasar por el menú en CADA página. */
+.salto-contenido {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transform: translateY(-200%);
+  padding: var(--espacio-1) var(--espacio-2);
+  background-color: var(--color-primario);
+  color: var(--color-fondo);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.salto-contenido:focus {
+  transform: translateY(0);
+}
+
+/* main recibe el foco cuando se usa el salto, pero no debe
+   dibujarse un recuadro alrededor de toda la página. */
+main:focus {
+  outline: none;
+}
