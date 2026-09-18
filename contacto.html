@@ -1,29 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacto — Daniel A. Flórez</title>
-  </head>
 
-  <body>
-    <header>
-      <nav aria-label="Navegación principal">
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="proyectos.html">Proyectos</a></li>
-          <li><a href="contacto.html" class="activo" aria-current="page">Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — Daniel A. Flórez</title>
+</head>
 
-    <main>
-      <h1>Contacto</h1>
+<body>
+  <header>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="contacto.html" class="activo" aria-current="page">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <p>
-        ¿Quieres escribirme? Déjame tus datos y un mensaje, o búscame
-        directamente en GitHub y LinkedIn.
+  <main>
+    <h1>Contacto</h1>
+
+    <p>
+      Busco trabajo remoto como desarrollador junior: freelance, prestación
+      de servicios o contrato indefinido. Escríbeme y te respondo el mismo
+      día.
+    </p>
+
+    <section>
+      <h2>Escríbeme</h2>
+
+      <form action="#" method="post" class="formulario">
+        <div class="campo">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required minlength="3" autocomplete="name"
+            placeholder="Ana Gómez" />
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" required autocomplete="email" placeholder="ana@empresa.com" />
+        </div>
+
+        <div class="campo">
+          <label for="telefono">Teléfono (opcional)</label>
+          <input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="300 123 4567" />
+        </div>
+
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="6" required minlength="20"
+            placeholder="Cuéntame qué necesitas y en qué puedo ayudar."></textarea>
+        </div>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+
+      <p class="nota">
+        Este formulario todavía no envía nada: valida los datos en el
+        navegador, pero no tiene servidor detrás. El backend llega en el
+        Sprint 8.
       </p>
-    </main>
-  </body>
+    </section>
+
+    <section>
+      <h2>También me encuentras acá</h2>
+      <ul class="redes">
+        <li><a href="https://github.com/asapdaniel00">Mi perfil de GitHub</a></li>
+        <li>
+          <a href="https://co.linkedin.com/in/daniel-alexander-florez-navarro">Mi perfil de LinkedIn</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+
 </html>
